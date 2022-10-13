@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    line-height: 1;
+    scroll-behavior: smooth;
+}
+.visually-heidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+body {
+    background-color: rgb(172, 233, 136);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    padding: 10px;
+    height: fit-content;
+    margin: 0 auto;
+}
+.weather__kyiv {
+    border: 3px solid green;
+    font-family: 'Open Sans', sans-serif;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 400px;
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 25px;
+    color: green;
+}
+span:not(:last-child) {
+    margin-bottom: 20px;
+}
+span:last-child {
+    text-transform: uppercase;
+}
