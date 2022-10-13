@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const API = 'http://api.openweathermap.org/data/2.5/weather?q=Kyiv&limit=1&id=524901&appid=56c60fffd3fd0c72e2d2649391a26b08'
 
-    function startFetch() {
-        return fetch(API)
-            .then(response => response.json(), 7200000)
+    // function startFetch() {
+         fetch(API)
+            .then(response => response.json())
             .then(data => {
                 localStorage.setItem('data', JSON.stringify(data));
                 console.log(data)
@@ -16,10 +16,9 @@ const API = 'http://api.openweathermap.org/data/2.5/weather?q=Kyiv&limit=1&id=52
             .catch((error) => {
                 console.log('Помилка запиту! ' + error);
             })
-    }
+        // return
+    // }
 
-    startFetch()
-    setInterval(startFetch, 7200)
-    
+    //  setInterval(startFetch, 7200)
     
 })
