@@ -19,6 +19,6 @@ const API = 'http://api.openweathermap.org/data/2.5/weather?q=Kyiv&limit=1&id=52
         // return
     // }
 
-    //  setInterval(startFetch, 7200)
+    //  setInterval(startFetch, 7200000)
     
 })
