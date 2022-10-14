@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-const API = 'http://api.openweathermap.org/data/2.5/weather?q=Kyiv&limit=1&id=524901&appid=56c60fffd3fd0c72e2d2649391a26b08'
+const API = 'https://api.openweathermap.org/data/2.5/weather?q=Kyiv&limit=1&id=524901&appid=56c60fffd3fd0c72e2d2649391a26b08'
 
     function startFetch() {
          fetch(API)
