@@ -6,8 +6,8 @@ const API = 'https://api.openweathermap.org/data/2.5/weather?q=Kyiv&limit=1&id=5
          fetch(API)
             .then(response => response.json())
             .then(data => {
-                localStorage.setItem('data', JSON.stringify(data));
-                console.log(data)
+                localStorage.setItem('data', JSON.stringify(data))
+                localStorage.getItem('data')
                 document.querySelector('.city-name').textContent = data.name;
                 document.querySelector('.humidity').textContent = `Вологість:  ${data.main.humidity}%`;
                 document.querySelector('.temperature').textContent = `Температура: ${Math.round(data.main.temp - 273)}°`;
