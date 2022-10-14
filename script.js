@@ -6,12 +6,12 @@ const API = 'https://api.openweathermap.org/data/2.5/weather?q=Kyiv&limit=1&id=5
          fetch(API)
             .then(response => response.json())
             .then(data => {
-                localStorage.setItem('data', JSON.stringify(data))
-                localStorage.getItem('data')
-                document.querySelector('.city-name').textContent = data.name;
-                document.querySelector('.humidity').textContent = `Вологість:  ${data.main.humidity}%`;
-                document.querySelector('.temperature').textContent = `Температура: ${Math.round(data.main.temp - 273)}°`;
-                document.getElementById('clouds').textContent = data.weather[0].description;        
+                localStorage.setItem('localData', JSON.stringify(data))
+                let obj = JSON.parse(localStorage.getItem('localData'))
+                document.querySelector('.city-name').textContent = obj.name;
+                document.querySelector('.humidity').textContent = `Вологість:  ${obj.main.humidity}%`;
+                document.querySelector('.temperature').textContent = `Температура: ${Math.round(obj.main.temp - 273)}°`;
+                document.getElementById('clouds').textContent = obj.weather[0].description;        
             })
             .catch((error) => {
                 console.log('Помилка запиту! ' + error);
