@@ -20,6 +20,6 @@ const API = 'https://api.openweathermap.org/data/2.5/weather?q=Kyiv&limit=1&id=5
     }
 
     startFetch()
-    setInterval(startFetch, 7200000)//2 дні
+    setInterval(startFetch, 7200000)//кожні 2 години
     
 })
